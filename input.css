@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-size: 14px;
+  color: white;
+}
+
+.container {
+  @apply max-w-5xl mx-auto;
+}
+.nav a {
+  @apply inline-block font-Raleway hover:font-bold hover:underline;
+}
+
+.nav a + a {
+  @apply ml-5 md:ml-10;
+}
+
+h1,
+button,
+h2,
+h3 {
+  @apply font-Raleway font-bold;
+}
+h2 {
+  @apply text-lg;
+}
+.intro-section {
+  background-image: url("../images/bg-curvy-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 0;
+  background-size: contain;
+}
+button {
+  @apply bg-gradient-to-r from-Cyan to-Blue rounded-full hover:bg-Cyan;
+}
+
+.feature-grid {
+  @apply grid grid-cols-1 grid-rows-4 justify-center items-center gap-16 py-16 md:grid-rows-2 md:grid-cols-2;
+}
+
+.feature-grid div {
+  @apply text-center;
+}
+.feature-grid div img {
+  @apply block m-auto w-16;
+}
+
+.feature-grid div h2 {
+  @apply mt-5 mb-2;
+}
+.productive-section {
+  @apply grid grid-cols-1 grid-rows-2 gap-16 py-16 justify-center items-center md:grid-cols-2 md:grid-rows-1;
+}
+.testimonial-section {
+  @apply w-[90%] grid grid-cols-1 grid-rows-3 gap-6 pt-16 pb-52 md:pb-44 md:grid-cols-3 md:grid-rows-1;
+}
+.card {
+  @apply bg-testimonials-background p-6 relative rounded-lg z-30;
+}
+
+.profile-card {
+  @apply flex items-center gap-4 mt-4;
+}
+.profile-img {
+  @apply w-12 h-12 rounded-full;
+}
+
+.footer-links a {
+  @apply block my-2;
+}
+@media screen and (min-width: 700px) {
+  .intro-section {
+    background-image: url("../images/bg-curvy-desktop.svg");
+  }
+}
